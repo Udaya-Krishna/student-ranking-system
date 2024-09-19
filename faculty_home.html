@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Faculty's View</h1>
+      </header>
+      <div class="card">
+        <label for="rankingCriteria">Select Ranking Criteria:</label>
+        <select id="rankingCriteria">
+          <option value="topGrades">Top 5 GPA Scores</option>
+          <option value="mostProjects">Most Number of Projects</option>
+          <option value="numberOfAwards">Number of Awards</option>
+        </select>
+        <button class="btn" onclick="displayFacultySection()">
+          View Ranking
+        </button>
+        <h3>Ranking List</h3>
+        <ul id="ranking-list"></ul>
+
+        <!-- Pie Chart -->
+        <h3>Student GPA Distribution</h3>
+        <canvas id="studentPieChart" width="400" height="400"></canvas>
+
+        <button class="btn logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

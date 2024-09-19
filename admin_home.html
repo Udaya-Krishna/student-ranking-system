@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administrator Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Administrator's Panel</h1>
+      </header>
+      <div class="card">
+        <h3>Upload Student Details</h3>
+        <form id="upload-form">
+          <input
+            type="text"
+            id="studentNameAdmin"
+            placeholder="Student Name"
+            required
+          />
+          <input
+            type="text"
+            id="academicRecord"
+            placeholder="Academic Record (e.g., GPA)"
+            required
+          />
+          <input
+            type="number"
+            id="numProjects"
+            placeholder="Number of Projects"
+            required
+          />
+          <input
+            type="number"
+            id="numAwards"
+            placeholder="Number of Awards"
+            required
+          />
+          <button type="button" class="btn" onclick="uploadDetails()">
+            Upload
+          </button>
+        </form>
+
+        <h3>Remove Student</h3>
+        <form id="remove-form">
+          <input
+            type="text"
+            id="removeStudentName"
+            placeholder="Student Name to Remove"
+            required
+          />
+          <button type="button" class="btn" onclick="removeStudent()">
+            Remove
+          </button>
+        </form>
+
+        <h3>Student List</h3>
+        <div id="student-list"></div>
+
+        <button class="btn logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Ranking Portal - Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <p>Ministry of AYUSH</p>
+        <h1>Student Ranking Portal</h1>
+      </header>
+      <div class="card">
+        <h2>Login</h2>
+        <label for="userType">Login as:</label>
+        <select id="userType">
+          <option value="student">Student</option>
+          <option value="faculty">Faculty</option>
+          <option value="admin">Administrator</option>
+        </select>
+        <button class="btn" onclick="login()">Login</button>
+      </div>
+    </div>
+
+    <script>
+      function login() {
+        const userType = document.getElementById("userType").value;
+        if (userType === "student") {
+          window.location.href = "student_home.html";
+        } else if (userType === "faculty") {
+          window.location.href = "faculty_home.html";
+        } else if (userType === "admin") {
+          window.location.href = "admin_home.html";
+        }
+      }
+    </script>
+  </body>
+</html>
