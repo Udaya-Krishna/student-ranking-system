@@ -57,7 +57,7 @@ input[type="text"], input[type="number"], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #ebfaea;
-    color: #057ff8;
+    color: #1a3b22;
 }
 
 input::placeholder{
